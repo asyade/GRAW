@@ -1,0 +1,160 @@
+/* 
+    Fonts
+*/
+
+@font-face {
+    font-family: 'roboto';
+    src: url('css/fonts/Roboto-Thin.ttf');
+}
+
+/*
+    Global settings
+*/
+
+body {
+    padding: 0px;
+    margin: 0px;
+    margin: 1em 4em;
+
+    /*background-color: #f7f7f7;*/
+}
+
+#page {
+    margin: 1em;
+    border: 1px solid black;
+}
+
+/*
+    Header & scrolling text
+*/
+
+
+header {
+    overflow: hidden;
+}
+
+.scroll-left {
+    font-family:robot black, sans-serif;
+    font-size: 3em;
+    margin: 0;
+    line-height: 2em;
+    height: 2em;
+    text-align: center;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);	
+    transform:translateX(100%);
+    /* Apply animation to this element */	
+    -moz-animation: example1 12s linear infinite;
+    -webkit-animation: example1 12s linear infinite;
+    animation: example1 12s linear infinite;
+   }
+   /* Move it (define the animation) */
+   @-moz-keyframes example1 {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+   }
+   @-webkit-keyframes example1 {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+   }
+   @keyframes example1 {
+    0%   { 
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%); 		
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%); 
+    }
+}
+
+/*
+    Article & thumbs
+*/
+
+.container {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.article {  
+    width: calc(50% - 2em);
+    padding: 6em;
+    padding-bottom: 4em;
+    padding-top: 3em;
+}
+
+.article > a {
+    position: absolute;
+    color: black;
+    text-decoration: none;
+    bottom: 0.8em;
+    left: 1em;
+}
+
+.article-top {
+    border-top: 1px solid black;
+}
+
+.article-left {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.article-right {
+    border-bottom: 1px solid black;
+}
+
+.article-bottom {
+    border-bottom: 0px;
+}
+
+.thumb-container {
+    background-size: contain;
+    
+}
+
+.thumb-container > img {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+ border: 1px solid black;   
+    
+    transition:0.5s all cubic-bezier(0.74, 0.21, 0.41, 0.81), 0s opacity;
+}
+
+.thumb-container {
+ border: 1px solid black;   
+}
+
+
+.thumb-container>img:hover {
+    opacity: 1;
+    margin-left: 5%;
+    margin-top: 5%;
+    
+}
+
+
+.article-link {
+    font-family:robot black, sans-serif;
+}
+
+#ghost {
+    position: absolute;
+    overflow: hidden;
+    margin: 35px 101px 0px 20px;
+    top: 2px;
+    background: white;
+    border: 1px solid black;
+    opacity: 0;
+}
+
+#ghost:hover {
+    transition: 1s all, 0s opacity;
+    opacity: 1;
+    margin: calc(1em + 35px)  calc(101px - 1em) 0px calc(1em + 19px);
+}
